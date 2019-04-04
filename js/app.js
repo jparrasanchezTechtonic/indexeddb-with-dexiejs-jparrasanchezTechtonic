@@ -39,13 +39,10 @@ function deleteBook(event) {
 
 
 function addBook(event) {
-
     // 2: YOUR CODE HERE
-
   var form = document.querySelector('form');
   // alert(form.elements.inputTitle.value);
   // alert(form.elements.inputAuthor.value);
-
   const obj = {
     author: form.elements.inputAuthor.value,
     numberOfPages: parseInt(form.elements.inputPages.value),
@@ -54,8 +51,6 @@ function addBook(event) {
     synopsis: form.elements.inputSynopsis.value,
     title: form.elements.inputTitle.value
   };
-
-
   // alert(form.elements.inputTitle.value);
     // alert(document.getElementById('inputTitle').value);
     var addBook = db.books.put(obj);
@@ -65,10 +60,8 @@ function addBook(event) {
     addBook.catch(function(rejected){
       console.log(rejected);
     })
-
     // Hint: Once you've added the book to your database, call populateTableUI with the added book's title
     // Check out the Table.put() method and what it returns at: https://dexie.org/docs/Table/Table.put()
-
 }
 
 

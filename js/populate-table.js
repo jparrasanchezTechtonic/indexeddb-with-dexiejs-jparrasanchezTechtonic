@@ -17,8 +17,11 @@ async function populateTableUI(newBookTitle) {
         var value = allBooks[i][columns[j]];
         td.innerText = value ? value : null;
         row.append(td);
+        td.addEventListener('click', function(){
+            // editBook();
+          console.log(allBooks[i][columns[j]]);
+        })
       }
-
       // creates a delete button with no functionality
       const deleteBtn = document.createElement('button');
       deleteBtn.innerText = 'delete book';
